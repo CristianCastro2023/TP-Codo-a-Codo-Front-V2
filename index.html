@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header >
+        
+        <button id="mostrar-fantasia" data-mostrar="true">Fantasía</button>
+        <button id="mostrar-historia" data-mostrar="false">Historia</button>
+        <button id="mostrar-comics" data-mostrar="false">Cómics</button>
+        <a href="ingresar.html" class="boton-enlace">Ingresar</a>
+       <!-- <a href="contacto.html" class="boton-enlace">Contacto</a> -->
+        
+        <input type="text" id="filtro" placeholder="Buscar productos...">
+        <button id="boton-carrito">Carrito</button>
+    </header>
+
+    
+
+    <section id="carrito-productos" class="container">
+        <!-- Productos -->
+    </section>
+
+    <section id="fantasia" style="display: none" class="container">
+        <!-- Productos de fantasía -->
+    </section>
+
+    <section id="historia" style="display: none" class="container">
+        <!-- Productos de historia -->
+    </section>
+
+    <section id="comics" style="display: none" class="container">
+        <!-- Productos de cómics -->
+    </section>
+    
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos una empresa joven, radicada en la ciudad de La Plata, nacida en el año 2014.</p>
+                <p class="boton-enlace"><a href="contacto.html">Contacto</a></p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024<b>AureaLibros</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+    
+    <div id="cuadro-dialogo" class="cuadro-dialogo">
+        <div id="contenido-cuadro-dialogo" class="contenido-cuadro-dialogo"></div>
+        <button id="cerrar-cuadro-dialogo" class="cerrar-cuadro-dialogo" disabled>Cerrar</button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
