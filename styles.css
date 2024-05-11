@@ -473,3 +473,28 @@ a[href="Ingresar.html"]
 .dropdown:hover .dropbtn {
     background-color: #444;
 }
+
+/* Agrega este código al final de tu archivo styles.css o en un bloque de estilo en el head de tu HTML */
+
+#dropdown-categorias{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    
+}
+
+#boton-deseos {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: red; /* Cambia el color del corazón según tu preferencia */
+}
+
+.añadir-a-deseos {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

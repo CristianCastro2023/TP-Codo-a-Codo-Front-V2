@@ -8,10 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const cuadroDialogo = document.getElementById("carrito-container");
     const contenidoCuadroDialogo = document.getElementById("contenido-cuadro-dialogo");
     const cerrarCuadroDialogo = document.getElementById("cerrar-cuadro-dialogo");
-    const botonComprar = document.getElementById("boton-comprar"); // Añadido el botón Comprar
+    const botonComprar = document.getElementById("boton-comprar");
+    const botonDeseos = document.getElementById("boton-deseos"); // Nuevo botón de deseos
 
     // Carrito de compras
     const carrito = [];
+    const listaDeseos = [];
 
     // Función para mostrar todos los productos al inicio
     function mostrarTodosLosProductos() {
@@ -24,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${producto.cover}" alt="${producto.title}">
                         <div class="overlay">
                             <button class="añadir-al-carrito" data-nombre="${producto.title}" data-precio="${producto.price}">Añadir al Carrito</button>
+                            <button class="añadir-a-deseos" data-nombre="${producto.title}">
+                            <box-icon name='heart' type='solid' animation='tada' color='#c90707'></box-icon> <!-- Icono de corazón sólido -->
+                            </button>
                         </div>
                     </div>
                     <div class="info">
@@ -44,7 +49,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 mostrarCarrito(); // Actualizar la visualización del carrito
             });
         });
+
+        // Agregar evento de clic para los botones "Añadir a la lista de deseos"
+        document.querySelectorAll(".añadir-a-deseos").forEach((button) => {
+            button.addEventListener("click", function () {
+                const nombre = button.dataset.nombre;
+                agregarAListaDeseos(nombre); // Agregar el producto a la lista de deseos
+            });
+        });
     }
+
 
     // Mostrar todos los productos al cargar la página
     mostrarTodosLosProductos();
@@ -145,4 +159,37 @@ document.addEventListener("DOMContentLoaded", function () {
         mostrarCarrito(); // Actualizar la visualización del carrito
     });
 
+    // Función para agregar un producto a la lista de deseos
+    function agregarAListaDeseos(nombre) {
+        // Verificar si el producto ya está en la lista de deseos
+        const existeEnLista = listaDeseos.some(item => item.title === nombre);
+        if (!existeEnLista) {
+            listaDeseos.push({ title: nombre });
+            mostrarListaDeseos(); // Actualizar la visualización de la lista de deseos
+        }
+    }
+
+    // Evento click en el botón de lista de deseos
+    botonDeseos.addEventListener("click", function () {
+        mostrarListaDeseos(); // Mostrar la lista de deseos al hacer clic en el botón
+    });
+
+    // Función para mostrar la lista de deseos
+    function mostrarListaDeseos() {
+        contenidoCuadroDialogo.innerHTML = ""; // Limpiar contenido anterior de la lista de deseos
+
+        if (listaDeseos.length === 0) {
+            contenidoCuadroDialogo.innerText = "La lista de deseos está vacía.";
+        } else {
+            let mensaje = "Lista de Deseos:\n";
+
+            listaDeseos.forEach((item) => {
+                mensaje += `${item.title}\n`;
+            });
+
+            contenidoCuadroDialogo.innerText = mensaje;
+        }
+
+        cuadroDialogo.style.display = "block"; // Mostrar el cuadro de diálogo de la lista de deseos
+    }
 });
