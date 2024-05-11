@@ -514,7 +514,7 @@ img {
   max-width: 35%;
   position: relative;
   margin: auto;
-  margin-left: 0; /* Establece el margen izquierdo en 0 */
+  margin-left: 10px; /* Ajusta esta propiedad para agregar espacio a la izquierda */
   margin-right: auto; /* Centra horizontalmente */
   top: 90px; /* Ajusta esta propiedad para mover el carrusel hacia abajo */
 }
