@@ -514,6 +514,8 @@ img {
   max-width: 35%;
   position: relative;
   margin: auto;
+  margin-left: 0; /* Establece el margen izquierdo en 0 */
+  margin-right: auto; /* Centra horizontalmente */
   top: 90px; /* Ajusta esta propiedad para mover el carrusel hacia abajo */
 }
 /* Next & previous buttons */
@@ -552,6 +554,11 @@ img {
     right: 0;
     width: auto;
     text-align: center;
+}
+
+/* Ajusta la alineación de los puntos indicadores a la izquierda */
+.slideshow-container .dot {
+    text-align: left;
 }
 /* Number text (1/3 etc) */
 .numbertext {
