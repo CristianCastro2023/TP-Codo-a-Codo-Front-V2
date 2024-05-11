@@ -544,7 +544,7 @@ img {
 }
 /* Caption text */
 .text {
-    color: rgb(255, 0, 119); /* Color del texto */
+    color: rgb(245, 243, 244); /* Color del texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
     font-size: 20px; /* Tamaño de fuente aumentado para dispositivos móviles */
     padding: 8px 12px;
