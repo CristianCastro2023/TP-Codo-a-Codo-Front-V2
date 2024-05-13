@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-image: url(img/Fondos_Pagina/Fondo-Fantasia-1.jpg);
+    font-family: 'Montserrat', sans-serif,"Roboto";
+    background-image: url(img/Fondos_Pagina/Fondo-Hogar-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,6 +14,7 @@ header {
     position: fixed;
     z-index: 100;
     background: crimson;
+    /*background: transparent;*/
     display: flex;
     justify-content: space-between; /* Alinea los elementos a los extremos */
     align-items: center;
@@ -544,7 +547,7 @@ img {
 }
 /* Caption text */
 .text {
-    color: white; /* Color del texto */
+    color: rgb(0, 255, 0); /* Color del texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
     font-size: 20px; /* Tamaño de fuente aumentado para dispositivos móviles */
     padding: 8px 12px;
@@ -554,6 +557,19 @@ img {
     right: 0;
     width: auto;
     text-align: center;
+    animation: fadeIn 1s ease-in; /* Agrega la animación a las letras */
+}
+
+/* Define la animación para las letras */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* La letra está completamente transparente al principio */
+        transform: translateY(-20px); /* La letra se mueve hacia arriba */
+    }
+    to {
+        opacity: 1; /* La letra se vuelve completamente visible */
+        transform: translateY(0); /* La letra vuelve a su posición original */
+    }
 }
 
 /* Ajusta la alineación de los puntos indicadores a la izquierda */
@@ -616,3 +632,76 @@ img {
 }
 }
 
+h1{
+    color: white;
+}
+.wrapper {
+    max-width: 75%;
+    margin: auto;
+  }
+  
+  .wrapper > p,
+  .wrapper > h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .wrapper > h1 {
+    letter-spacing: 3px;
+  }
+  
+  .accordion {
+    background-color: transparent;
+    color: rgba(248, 245, 245, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .accordion i {
+    font-size: 1.6rem;
+  }
+  
+  .active,
+  .accordion:hover {
+    background-color: transparent;
+  }
+  
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    overflow: hidden;
+  }
+  
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    overflow: hidden;
+    opacity: 0; /* Oculta la respuesta inicialmente */
+    height: 0; /* Oculta el contenido de la respuesta y no ocupa espacio */
+    transition: opacity 0.5s ease, height 0.5s ease; /* Agregar una transición para suavizar el efecto de aparición */
+  }
+  
+  .pannel.active {
+    opacity: 1; /* Muestra la respuesta */
+    height: auto; /* Muestra el contenido de la respuesta */
+    background-color: #ffffcc; /* Color de fondo de resaltado */
+    color: #0e0d0d; /* Cambiar el color del texto para que contraste */
+  }
+  
+  
+  .faq {
+    border: transparent;
+    margin: 10px 0;
+  }
+  
+  .faq.active {
+    border: none;
+  }
+  
