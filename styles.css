@@ -512,125 +512,78 @@ img {
     vertical-align: middle;
 
 }
-/* Slideshow container */
-.slideshow-container {
-  max-width: 35%;
-  position: relative;
-  margin: auto;
-  margin-left: 10px; /* Ajusta esta propiedad para agregar espacio a la izquierda */
-  margin-right: auto; /* Centra horizontalmente */
-  top: 90px; /* Ajusta esta propiedad para mover el carrusel hacia abajo */
-}
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-/* Caption text */
-.text {
-    color: rgb(0, 255, 0); /* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
-    font-size: 20px; /* Tamaño de fuente aumentado para dispositivos móviles */
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 16px; /* Ajustado para que el texto no esté demasiado pegado al borde inferior */
-    left: 0;
-    right: 0;
-    width: auto;
-    text-align: center;
-    animation: fadeIn 1s ease-in; /* Agrega la animación a las letras */
+.carousel-control-prev,
+.carousel-control-next {
+    color: black !important;
 }
 
-/* Define la animación para las letras */
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* La letra está completamente transparente al principio */
-        transform: translateY(-20px); /* La letra se mueve hacia arriba */
-    }
-    to {
-        opacity: 1; /* La letra se vuelve completamente visible */
-        transform: translateY(0); /* La letra vuelve a su posición original */
-    }
+#carouselExampleCaptions {
+    margin-top: 50px; /* Ajusta este valor según la cantidad de espacio que quieras entre el carrusel y el borde superior de la página */
 }
 
-/* Ajusta la alineación de los puntos indicadores a la izquierda */
-.slideshow-container .dot {
-    text-align: left;
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste dentro del contenedor */
 }
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+
+h5 {
+    letter-spacing: 2px; /* Reducir el espaciado entre letras */
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    transition: color 0.3s ease;
 }
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+
+h5:hover {
+    color: red; /* Cambia el color del texto al pasar el cursor sobre él */
 }
-.active, .dot:hover {
-  background-color: #717171;
+#btn-banner {
+    width: 130px;
+    height: 35px;
+    font-weight: bold;
+    background-color: black;
+    letter-spacing: 3px;
+    margin-left: 10px; /* Ajustar el margen izquierdo del botón */
+    margin-top: 20px; /* Ajustar el margen superior del botón */
+    color: rgba(225, 230, 0);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+
+#btn-banner:hover {
+    background-color: red; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+    color: white; /* Cambia el color del texto al pasar el cursor sobre él */
 }
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+
+.carousel-caption span,
+.carousel-caption p {
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    color :black
 }
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.carousel-caption h3,
+.carousel-caption p,
+.carousel-caption .btn {
+    color: black;
 }
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}}
-.dot{
- height: 10px;
-  width: 10px;
+
+.carousel-caption .btn {
+    background-color: black;
+    color: rgba(225, 230, 0);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
-@media only screen and (max-width: 500px) {
-  .prev, .next,.text {font-size: 14px}
-  .slideshow-container {
-    max-width: 90%; /* Reducido aún más el tamaño del contenedor en dispositivos móviles */
-    top: 70px; /* Ajustado para mantener el desplazamiento hacia abajo */
+
+/* Aplicar una sombra al hacer clic en el botón */
+#btn-banner:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic en el botón */
 }
-.text {
-    font-size: 16px; /* Tamaño de fuente ajustado para dispositivos móviles */
-    bottom: 8px; /* Ajustado para mantener el texto centrado verticalmente */
-}
-}
+
+
+
 
 h1{
     color: white;
