@@ -1,4 +1,4 @@
-import { Book, displayBooks } from '/books.js';
+import { Book, displayBooks } from './assets/js/books.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     const carritoProductos = document.getElementById("carrito-productos");
