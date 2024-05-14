@@ -43,6 +43,7 @@ body {
 .box-info > h1 {
     text-align: left;
     letter-spacing: 5px;
+    color: #0a0a0a;
 }
 
 .data {
@@ -53,6 +54,8 @@ body {
 
 .data > p {
     font-size: 1rem;
+    color: #e9f0eb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra con desplazamiento de 2px horizontal y 2px vertical, con un radio de desenfoque de 4px y un color de sombra semitransparente */
 }
 
 .data > p > i {
@@ -109,7 +112,7 @@ form {
 
 .input-box > input::placeholder,
 .input-box > textarea::placeholder {
-    color:#a3a3a3;
+    color:#0a0a0a;
     
 }
 
