@@ -7,7 +7,7 @@
 body {
     background: #dfe2df;
     font-family: 'open sans';
-    background-image: url(img/Fondos_Pagina/Fondo-Hogar-1.jpg);
+    background-image: url('../../img/Fondos_Pagina/Fondo-Fantasia-1.jpg');
     background-size: cover;
 }
 .home-link {
