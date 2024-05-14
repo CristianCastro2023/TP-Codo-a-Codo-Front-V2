@@ -540,7 +540,7 @@ h5:hover {
 }
 #btn-banner {
     width: 130px;
-    height: 35px;
+    height: 39px;
     font-weight: bold;
     background-color: black;
     letter-spacing: 3px;
@@ -572,7 +572,7 @@ h5:hover {
 .carousel-caption .btn {
     background-color: black;
     color: rgba(225, 230, 0);
-    border-radius: 20px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
 }
@@ -581,9 +581,6 @@ h5:hover {
 #btn-banner:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic en el botón */
 }
-
-
-
 
 h1{
     color: white;

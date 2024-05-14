@@ -11,8 +11,7 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    background-image: url(img/Fondos_Pagina/Fondo-Fantasia-1.jpg);
-    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(img/Fondos_Pagina/Fondo-Fantasia-1.jpg);
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(img/bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
