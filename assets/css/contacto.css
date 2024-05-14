@@ -11,10 +11,10 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(img/bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-image: url('../../img/Fondos_Pagina/Fondo-Fantasia-1.jpg');
 }
 .container {
     display:grid;
@@ -22,6 +22,15 @@ body {
     padding:20px;
     gap:10px;
     width: 1000px;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    text-decoration: none; /* Para quitar el subrayado del enlace */
 }
 
 .box-info {
@@ -34,6 +43,7 @@ body {
 .box-info > h1 {
     text-align: left;
     letter-spacing: 5px;
+    color: #0a0a0a;
 }
 
 .data {
@@ -44,6 +54,8 @@ body {
 
 .data > p {
     font-size: 1rem;
+    color: #e9f0eb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra con desplazamiento de 2px horizontal y 2px vertical, con un radio de desenfoque de 4px y un color de sombra semitransparente */
 }
 
 .data > p > i {
@@ -100,7 +112,7 @@ form {
 
 .input-box > input::placeholder,
 .input-box > textarea::placeholder {
-    color:#a3a3a3;
+    color:#0a0a0a;
     
 }
 

@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-image: url(img/bg.jpg);
+    font-family: 'Montserrat', sans-serif,"Roboto";
+    background-image: url(img/Fondos_Pagina/Fondo-Hogar-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,6 +14,7 @@ header {
     position: fixed;
     z-index: 100;
     background: crimson;
+    /*background: transparent;*/
     display: flex;
     justify-content: space-between; /* Alinea los elementos a los extremos */
     align-items: center;
@@ -498,3 +501,157 @@ a[href="Ingresar.html"]
     padding: 0;
     cursor: pointer;
 }
+
+.mySlides {
+    display: none
+}
+img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+    /* Otros estilos... */
+    vertical-align: middle;
+
+}
+.carousel-control-prev,
+.carousel-control-next {
+    color: black !important;
+}
+
+#carouselExampleCaptions {
+    margin-top: 50px; /* Ajusta este valor según la cantidad de espacio que quieras entre el carrusel y el borde superior de la página */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste dentro del contenedor */
+}
+
+h5 {
+    letter-spacing: 2px; /* Reducir el espaciado entre letras */
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+h5:hover {
+    color: red; /* Cambia el color del texto al pasar el cursor sobre él */
+}
+#btn-banner {
+    width: 130px;
+    height: 39px;
+    font-weight: bold;
+    background-color: black;
+    letter-spacing: 3px;
+    margin-left: 10px; /* Ajustar el margen izquierdo del botón */
+    margin-top: 20px; /* Ajustar el margen superior del botón */
+    color: rgba(225, 230, 0);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btn-banner:hover {
+    background-color: red; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
+    color: white; /* Cambia el color del texto al pasar el cursor sobre él */
+}
+
+.carousel-caption span,
+.carousel-caption p {
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    color :black
+}
+.carousel-caption h3,
+.carousel-caption p,
+.carousel-caption .btn {
+    color: black;
+}
+
+.carousel-caption .btn {
+    background-color: black;
+    color: rgba(225, 230, 0);
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Aplicar una sombra al hacer clic en el botón */
+#btn-banner:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic en el botón */
+}
+
+h1{
+    color: white;
+}
+.wrapper {
+    max-width: 75%;
+    margin: auto;
+  }
+  
+  .wrapper > p,
+  .wrapper > h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .wrapper > h1 {
+    letter-spacing: 3px;
+  }
+  
+  .accordion {
+    background-color: transparent;
+    color: rgba(248, 245, 245, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .accordion i {
+    font-size: 1.6rem;
+  }
+  
+  .active,
+  .accordion:hover {
+    background-color: transparent;
+  }
+  
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    overflow: hidden;
+  }
+  
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    overflow: hidden;
+    opacity: 0; /* Oculta la respuesta inicialmente */
+    height: 0; /* Oculta el contenido de la respuesta y no ocupa espacio */
+    transition: opacity 0.5s ease, height 0.5s ease; /* Agregar una transición para suavizar el efecto de aparición */
+  }
+  
+  .pannel.active {
+    opacity: 1; /* Muestra la respuesta */
+    height: auto; /* Muestra el contenido de la respuesta */
+    background-color: #ffffcc; /* Color de fondo de resaltado */
+    color: #0e0d0d; /* Cambiar el color del texto para que contraste */
+  }
+  
+  
+  .faq {
+    border: transparent;
+    margin: 10px 0;
+  }
+  
+  .faq.active {
+    border: none;
+  }
+  
