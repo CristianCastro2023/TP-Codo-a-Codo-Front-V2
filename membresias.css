@@ -10,7 +10,15 @@ body {
     background-image: url(img/Fondos_Pagina/Fondo-Hogar-1.jpg);
     background-size: cover;
 }
-
+.home-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999; /* Asegura que el icono esté sobre otros elementos */
+    color: #fff; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    text-decoration: none; /* Para quitar el subrayado del enlace */
+}
 .contenedor {
     width: 90%;
     max-width: 900px;
@@ -137,5 +145,5 @@ body {
 }
 
 .pagina-2 a {
-    font-size: 26px; /* Tamaño de fuente para los enlaces */
+    font-size: 2px; /* Tamaño de fuente para los enlaces */
 }
