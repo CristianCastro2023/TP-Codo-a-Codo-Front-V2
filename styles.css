@@ -577,6 +577,36 @@ h5:hover {
     cursor: pointer;
 }
 
+/* Estilos para la sección del carrusel de banners */
+.carousel-caption h5 {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.carousel-caption h5:hover {
+    color: red;
+}
+
+.carousel-caption .btn-banner {
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    background-color: black;
+    letter-spacing: 3px;
+    color: rgba(225, 230, 0);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-caption .btn-banner:hover {
+    background-color: red;
+    color: white;
+}
+
 /* Aplicar una sombra al hacer clic en el botón */
 #btn-banner:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic en el botón */
