@@ -164,46 +164,6 @@ a[href="Ingresar.html"]
     justify-content: space-between; /* Alinea los elementos uniformemente en el espacio vertical */
 }
 
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(1, 1fr); /* En dispositivos móviles, muestra un libro por fila */
-    }
-
-    .single-product {
-        width: 100%; /* Un producto por línea en dispositivos móviles */
-        margin: 10px 0; /* Espacio entre productos en dispositivos móviles */
-    }
-
-    #filtro {
-        display: none;
-    }
-
-    .box-options {
-        display: none;
-    }
-
-    /* Asegurar que el encabezado no oculte el contenido de carritos al hacer scroll */
-    #carrito-productos {
-        margin-top: 110px; /* Ajusta este valor para dispositivos móviles */
-    }
-
-    /* Estilos del footer para dispositivos móviles */
-    .pie-pagina {
-        padding: 15px 10px;
-    }
-
-    .pie-pagina .grupo-1 {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
-    }
-    
-    .pie-pagina .grupo-1 .box figure img {
-        width: 100px; /* Ajusta el tamaño de las imágenes de las redes sociales en dispositivos móviles */
-    }
-
-}
  
 .single-product:hover {
     transform: translateY(-10px);
@@ -713,4 +673,46 @@ h1{
   .faq.active {
     border: none;
   }
+
+
+  /* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* En dispositivos móviles, muestra un libro por fila */
+    }
+
+    .single-product {
+        width: 100%; /* Un producto por línea en dispositivos móviles */
+        margin: 10px 0; /* Espacio entre productos en dispositivos móviles */
+    }
+
+    #filtro {
+        display: none;
+    }
+
+    .box-options {
+        margin-right: 1rem;
+    }
+
+    /* Asegurar que el encabezado no oculte el contenido de carritos al hacer scroll */
+    #carrito-productos {
+        margin-top: 110px; /* Ajusta este valor para dispositivos móviles */
+    }
+
+    /* Estilos del footer para dispositivos móviles */
+    .pie-pagina {
+        padding: 15px 10px;
+    }
+
+    .pie-pagina .grupo-1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    
+    .pie-pagina .grupo-1 .box figure img {
+        width: 100px; /* Ajusta el tamaño de las imágenes de las redes sociales en dispositivos móviles */
+    }
+
+}
   
