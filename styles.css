@@ -22,15 +22,24 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px; /* Reducir la altura del encabezado */
+    height: 47px; /* Reducir la altura del encabezado */
 }
 
 
-.header-top {
+.box-header {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px; /* Espacio entre los elementos */
+    /*gap: 10px; /* Espacio entre los elementos */
 }
+
+.box-options {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}  
 
 #filtro,
 .dropbtn,
@@ -42,12 +51,15 @@ header {
 
 #filtro {
     flex: 1;
-    padding: 5px;
+    padding: .5rem .5rem .5rem 1rem;
+    border-radius: .5rem;
     width: 100%;
     max-width: 200px; /* Reducir el ancho máximo del campo de búsqueda */
     border: none;
-    background-color: #333;
-    color: #fff;
+    border: 1.5px solid #fff;
+    background-color: #af9393;
+    font-weight: 600;
+    font-size: smaller;
 }
 
 .dropbtn,
@@ -122,12 +134,7 @@ a[href="Ingresar.html"]
     margin-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
 }
 
-/* Asegurar que el encabezado no oculte el contenido de carritos al hacer scroll */
-@media screen and (max-width: 768px) {
-    #carrito-productos {
-        margin-top: 110px; /* Ajusta este valor para dispositivos móviles */
-    }
-}
+
 
 .container {
     display: grid;
@@ -167,6 +174,35 @@ a[href="Ingresar.html"]
         width: 100%; /* Un producto por línea en dispositivos móviles */
         margin: 10px 0; /* Espacio entre productos en dispositivos móviles */
     }
+
+    #filtro {
+        display: none;
+    }
+
+    .box-options {
+        display: none;
+    }
+
+    /* Asegurar que el encabezado no oculte el contenido de carritos al hacer scroll */
+    #carrito-productos {
+        margin-top: 110px; /* Ajusta este valor para dispositivos móviles */
+    }
+
+    /* Estilos del footer para dispositivos móviles */
+    .pie-pagina {
+        padding: 15px 10px;
+    }
+
+    .pie-pagina .grupo-1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    
+    .pie-pagina .grupo-1 .box figure img {
+        width: 100px; /* Ajusta el tamaño de las imágenes de las redes sociales en dispositivos móviles */
+    }
+
 }
  
 .single-product:hover {
@@ -349,22 +385,6 @@ a[href="Ingresar.html"]
     text-align: center;
 }
 
-/* Estilos del footer para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .pie-pagina {
-        padding: 15px 10px;
-    }
-
-    .pie-pagina .grupo-1 {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
-    }
-    
-    .pie-pagina .grupo-1 .box figure img {
-        width: 100px; /* Ajusta el tamaño de las imágenes de las redes sociales en dispositivos móviles */
-    }
-}
 
 #carrito-container {
     /* Estilos para el cuadro de diálogo del carrito */
@@ -448,14 +468,19 @@ a[href="Ingresar.html"]
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: auto;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #af9393;
+    border: 2px solid crimson;
     min-width: 160px;
     z-index: 1;
+    border-end-end-radius: 1rem;
+    border-end-start-radius: 1rem;
+
 }
 
 .dropdown-content a {
@@ -463,6 +488,12 @@ a[href="Ingresar.html"]
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: center;
+    border-bottom: 2px solid crimson;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
 }
 
 .dropdown-content a:hover {
@@ -538,17 +569,14 @@ h5 {
 h5:hover {
     color: red; /* Cambia el color del texto al pasar el cursor sobre él */
 }
+
 #btn-banner {
-    width: 130px;
-    height: 39px;
+    padding: .5rem;
     font-weight: bold;
-    background-color: black;
+    background-color: #000;
     letter-spacing: 3px;
-    margin-left: 10px; /* Ajustar el margen izquierdo del botón */
-    margin-top: 20px; /* Ajustar el margen superior del botón */
     color: rgba(225, 230, 0);
     border-radius: 20px;
-    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -656,16 +684,17 @@ h1{
   }
   
   .pannel {
-    padding: 0 2rem 2.5rem 2rem;
-    overflow: hidden;
-  }
-  
-  .pannel {
-    padding: 0 2rem 2.5rem 2rem;
+    height: 100%;
+    border-radius: 1rem;
     overflow: hidden;
     opacity: 0; /* Oculta la respuesta inicialmente */
     height: 0; /* Oculta el contenido de la respuesta y no ocupa espacio */
     transition: opacity 0.5s ease, height 0.5s ease; /* Agregar una transición para suavizar el efecto de aparición */
+  }
+
+  .pannel p{
+    padding: 1rem;
+    height: 100%;
   }
   
   .pannel.active {
