@@ -78,48 +78,59 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Función para mostrar productos según la categoría seleccionada o el filtro de búsqueda
-    function mostrarProductos(categoria = "", filtroBusqueda = "") {
-        carritoProductos.innerHTML = ""; // Limpiar el contenedor de productos
+function mostrarProductos(categoria = "", filtroBusqueda = "") {
+    carritoProductos.innerHTML = ""; // Limpiar el contenedor de productos
 
-        displayBooks.forEach((producto) => {
-            // Filtrar por categoría si se especifica una categoría
-            if (categoria && producto.category !== categoria) {
-                return; // Omitir este producto si no coincide con la categoría seleccionada
-            }
+    displayBooks.forEach((producto) => {
+        // Filtrar por categoría si se especifica una categoría
+        if (categoria && producto.category !== categoria) {
+            return; // Omitir este producto si no coincide con la categoría seleccionada
+        }
 
-            // Filtrar por búsqueda si se especifica un filtro de búsqueda
-            if (filtroBusqueda && !producto.title.toLowerCase().includes(filtroBusqueda)) {
-                return; // Omitir este producto si no coincide con el filtro de búsqueda
-            }
+        // Filtrar por búsqueda si se especifica un filtro de búsqueda
+        if (filtroBusqueda && !producto.title.toLowerCase().includes(filtroBusqueda)) {
+            return; // Omitir este producto si no coincide con el filtro de búsqueda
+        }
 
-            // Crear el HTML del producto
-            const productoHTML = `
-                <article class="single-product">
-                    <div class="product-image">
-                        <img src="${producto.cover}" alt="${producto.title}">
-                        <div class="overlay">
-                            <button class="añadir-al-carrito" data-nombre="${producto.title}" data-precio="${producto.price}">Añadir al Carrito</button>
-                        </div>
+        // Crear el HTML del producto
+        const productoHTML = `
+            <article class="single-product">
+                <div class="product-image">
+                    <img src="${producto.cover}" alt="${producto.title}">
+                    <div class="overlay">
+                        <button class="añadir-al-carrito" data-nombre="${producto.title}" data-precio="${producto.price}">Añadir al Carrito</button>
+                        <button class="añadir-a-deseos" data-nombre="${producto.title}">
+                            <box-icon name='heart' type='solid' animation='tada' color='#c90707'></box-icon> <!-- Icono de corazón sólido -->
+                        </button>
                     </div>
-                    <div class="info">
-                        <h3>${producto.title}</h3>
-                        <p class="price">$${producto.price}</p>
-                    </div>
-                </article>
-            `;
-            carritoProductos.innerHTML += productoHTML; // Agregar el producto al contenedor
-        });
+                </div>
+                <div class="info">
+                    <h3>${producto.title}</h3>
+                    <p class="price">$${producto.price}</p>
+                </div>
+            </article>
+        `;
+        carritoProductos.innerHTML += productoHTML; // Agregar el producto al contenedor
+    });
 
-        // Agregar evento de clic para los botones "Añadir al Carrito"
-        document.querySelectorAll(".añadir-al-carrito").forEach((button) => {
-            button.addEventListener("click", function () {
-                const nombre = button.dataset.nombre;
-                const precio = parseFloat(button.dataset.precio);
-                carrito.push({ title: nombre, price: precio });
-                mostrarCarrito(); // Actualizar la visualización del carrito
-            });
+    // Agregar evento de clic para los botones "Añadir al Carrito"
+    document.querySelectorAll(".añadir-al-carrito").forEach((button) => {
+        button.addEventListener("click", function () {
+            const nombre = button.dataset.nombre;
+            const precio = parseFloat(button.dataset.precio);
+            carrito.push({ title: nombre, price: precio });
+            mostrarCarrito(); // Actualizar la visualización del carrito
         });
-    }
+    });
+
+    // Agregar evento de clic para los botones "Añadir a la lista de deseos"
+    document.querySelectorAll(".añadir-a-deseos").forEach((button) => {
+        button.addEventListener("click", function () {
+            const nombre = button.dataset.nombre;
+            agregarAListaDeseos(nombre); // Agregar el producto a la lista de deseos
+        });
+    });
+}
 
     // Función para mostrar el contenido del carrito
     function mostrarCarrito() {

@@ -21,17 +21,16 @@
   <body>
     <header>
         <div class="box-header">
-            <div class="dropdown">
-                <button class="dropbtn" id="dropdown-categorias"><box-icon name="menu" color="#fff"></box-icon></button>
-                <div class="dropdown-content" id="categorias-dropdown">
-                  <!-- Cambiado el id a categorias-dropdown -->
-                    <a class="categoria" data-categoria="Fantasía">Fantasía</a>
-                    <a class="categoria" data-categoria="Historia">Historia</a>
-                    <a class="categoria" data-categoria="Comics">Cómics</a>
-                </div>
+          <div class="dropdown">
+            <button class="dropbtn" id="dropdown-categorias"><box-icon name="menu" color="#fff"></box-icon></button>
+            <div class="dropdown-content" id="categorias-dropdown">
+                <a class="categoria" data-categoria="Fantasía">Fantasía</a>
+                <a class="categoria" data-categoria="Historia">Historia</a>
+                <a class="categoria" data-categoria="Comics">Cómics</a>
             </div>
+        </div>
 
-            <input type="text" id="filtro" placeholder="Buscar por nombre..." />
+            
 
             <div class="box-options">
               <button id="boton-deseos"><box-icon name="heart" type="solid" color="#fff" size="20px"></box-icon></button>
@@ -41,7 +40,7 @@
             
         </div>
     </header>
-
+    <input type="text" id="filtro" placeholder="Buscar Libro ..." /> <!-- Barra de búsqueda -->
     <main class="container" id="carrito-productos"></main>
 
     <div id="carrito-container">

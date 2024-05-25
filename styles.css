@@ -41,30 +41,94 @@ header {
     align-items: center;
 }  
 
-#filtro,
-.dropbtn,
+
 .boton-enlace,
-#dropdown-categorias,
+
 #boton-carrito {
     height: 100%; /* Ajustar la altura al encabezado */
 }
 
 #filtro {
-    flex: 1;
-    padding: .5rem .5rem .5rem 1rem;
-    border-radius: .5rem;
-    width: 100%;
-    max-width: 200px; /* Reducir el ancho máximo del campo de búsqueda */
-    border: none;
+    display: block;
+    margin: 50px auto; /* Ajusta el valor del margen superior según sea necesario */
+    max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+    padding: 10px;
     border: 1.5px solid #fff;
     background-color: #af9393;
     font-weight: 600;
     font-size: smaller;
 }
 
-.dropbtn,
+#filtro:focus {
+    outline: none;
+    border-color: dodgerblue;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: auto;
+}
+
+#dropdown-categorias{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #af9393;
+    border: 2px solid crimson;
+    min-width: 160px;
+    z-index: 1;
+    border-end-end-radius: 1rem;
+    border-end-start-radius: 1rem;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid crimson;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+
+#boton-deseos {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: red; /* Cambia el color del corazón según tu preferencia */
+}
+
+.añadir-a-deseos {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 .boton-enlace,
-#dropdown-categorias,
+
 #boton-carrito {
     font-size: 14px; /* Reducir el tamaño del texto */
     padding: 5px 10px;
@@ -75,9 +139,9 @@ header {
     cursor: pointer;
 }
 
-.dropbtn:hover,
+
 .boton-enlace:hover,
-#dropdown-categorias:hover,
+
 #boton-carrito:hover {
     background-color: orangered;
 }
@@ -255,96 +319,6 @@ a[href="Ingresar.html"]
     background-color: orange;
 }
 
-/* slider */
-.slider-frame {
-    width: 1280px;
-    height: auto;
-    margin: 50px auto 0;
-    overflow: hidden;
-}
-
-.slider-frame ul {
-    display: flex;
-    padding: 0;
-    width: 400%;
-    justify-content: center; /* Centra las imágenes inicialmente */
-    animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-frame li {
-    width: 100%;
-    list-style: none;
-}
-
-.slider-frame img {
-    width: 40%;
-}
-
-@keyframes slide {
-    0% { margin-left: 25%; } /* Cambia el valor de inicio para centrar */
-    20% { margin-left: 25%; }
-    
-    25% { margin-left: -75%; }
-    45% { margin-left: -75%; }
-    
-    50% { margin-left: -175%; }
-    70% { margin-left: -175%; }
-    
-    75% { margin-left: -275%; }
-    100% { margin-left: -275%; }
-}
-/* slider */
-
-/* Estilos del footer para pantallas grandes */
-.pie-pagina {
-    width: 100%;
-    background-color: crimson;
-    color: white;
-}
-
-/* Estilos para el grupo 1 del footer en pantallas grandes */
-.pie-pagina .grupo-1 {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px;
-    padding: 45px 0px;
-}
-
-/* Estilos para el grupo 2 del footer en pantallas grandes */
-.pie-pagina .grupo-2 {
-    background-color: #0a1a2a;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-
-/* Estilos para los íconos de redes sociales en pantallas grandes */
-.pie-pagina .grupo-1 .red-social a {
-    /* Si necesitas ajustar el tamaño de los íconos, puedes hacerlo aquí */
-    display: inline-block;
-    text-decoration: none;
-    width: 45px; /* Tamaño de los íconos */
-    height: 45px; /* Tamaño de los íconos */
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #0d2033;
-    text-align: center;
-    transition: all 300ms ease;
-}
-
-/* Estilos para el texto en el footer en pantallas grandes */
-.pie-pagina .grupo-2 small {
-    font-size: 15px;
-}
-
-#datos-clima {
-    text-align: center;
-}
-
 
 #carrito-container {
     /* Estilos para el cuadro de diálogo del carrito */
@@ -425,73 +399,47 @@ a[href="Ingresar.html"]
     border: none;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: auto;
+/* slider */
+.slider-frame {
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #af9393;
-    border: 2px solid crimson;
-    min-width: 160px;
-    z-index: 1;
-    border-end-end-radius: 1rem;
-    border-end-start-radius: 1rem;
-
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    border-bottom: 2px solid crimson;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #444;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #444;
-}
-
-/* Agrega este código al final de tu archivo styles.css o en un bloque de estilo en el head de tu HTML */
-
-#dropdown-categorias{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    
-}
-
-#boton-deseos {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: red; /* Cambia el color del corazón según tu preferencia */
-}
-
-.añadir-a-deseos {
-    background: none;
-    border: none;
+.slider-frame ul {
+    display: flex;
     padding: 0;
-    cursor: pointer;
+    width: 400%;
+    justify-content: center; /* Centra las imágenes inicialmente */
+    animation: slide 20s infinite alternate ease-in-out;
 }
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame img {
+    width: 40%;
+}
+
+@keyframes slide {
+    0% { margin-left: 25%; } /* Cambia el valor de inicio para centrar */
+    20% { margin-left: 25%; }
+    
+    25% { margin-left: -75%; }
+    45% { margin-left: -75%; }
+    
+    50% { margin-left: -175%; }
+    70% { margin-left: -175%; }
+    
+    75% { margin-left: -275%; }
+    100% { margin-left: -275%; }
+}
+
+
+
 
 .mySlides {
     display: none
@@ -674,7 +622,51 @@ h1{
     border: none;
   }
 
+/* Estilos del footer para pantallas grandes */
+.pie-pagina {
+    width: 100%;
+    background-color: crimson;
+    color: white;
+}
 
+/* Estilos para el grupo 1 del footer en pantallas grandes */
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+/* Estilos para el grupo 2 del footer en pantallas grandes */
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos para los íconos de redes sociales en pantallas grandes */
+.pie-pagina .grupo-1 .red-social a {
+    /* Si necesitas ajustar el tamaño de los íconos, puedes hacerlo aquí */
+    display: inline-block;
+    text-decoration: none;
+    width: 45px; /* Tamaño de los íconos */
+    height: 45px; /* Tamaño de los íconos */
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+/* Estilos para el texto en el footer en pantallas grandes */
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
   /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .container {
@@ -687,7 +679,10 @@ h1{
     }
 
     #filtro {
-        display: none;
+        width: 60%; /* Reducir el ancho de la barra de búsqueda */
+        margin: 50px auto; /* Centrar la barra de búsqueda y darle espacio hacia abajo */
+        font-size: 16px; /* Ajustar el tamaño de fuente */
+        padding: 8px; /* Ajustar el padding para que se vea bien en dispositivos móviles */
     }
 
     .box-options {
