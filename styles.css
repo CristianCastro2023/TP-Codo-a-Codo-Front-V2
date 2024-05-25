@@ -31,6 +31,16 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Añadir sombra al texto */
     margin-top: 5px; /* Ajustar el margen superior según sea necesario */
     margin-left: 180px; /* Ajustar el margen izquierdo para desplazar más hacia la derecha */
+    transition: text-shadow 0.5s ease; /* Transición suave para el efecto */
+}
+
+#titulo-header:hover {
+    text-shadow: 
+        0 0 5px #00ffea, /* Sombra de brillo */
+        0 0 10px #00ffea, /* Sombra de brillo */
+        0 0 15px #00ffea, /* Sombra de brillo */
+        0 0 20px #00ffea, /* Sombra de brillo */
+        0 0 25px #00ffea; /* Sombra de brillo */
 }
 
 
@@ -221,6 +231,7 @@ a[href="Ingresar.html"]
     border-radius: 15px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    border: none !important;
 }
 
 .single-product {
@@ -688,6 +699,7 @@ h1{
     }
 
     #titulo-header {
+        font-size: 20px; /* Tamaño de letra más pequeño para dispositivos móviles */
         margin-left: auto; /* Para centrar el título */
         margin-right: auto; /* Para centrar el título */
         text-align: center; /* Alinear el texto al centro */
