@@ -568,9 +568,32 @@ h5:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic en el botón */
 }
 
-h1{
+h1#titulo-faqs {
+    font-size: 32px;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: inline-block; /* Asegura que el elemento ocupe solo el ancho del texto */
+    text-align: center !important; /* Centra el texto */
+    margin-left: calc(50% - 150px); /* Ajustamos el margen izquierdo para centrarlo */
 }
+  
+  h1:hover {
+    animation: neon 1.5s infinite alternate; /* Aplicar animación de luces de neón al hacer hover */
+  }
+  
+  @keyframes neon {
+    0% {
+      color: white;
+      text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan, 0 0 20px cyan, 0 0 25px cyan, 0 0 30px cyan, 0 0 35px cyan, 0 0 40px cyan;
+    }
+    100% {
+      color: cyan;
+      text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan, 0 0 20px cyan, 0 0 25px cyan, 0 0 30px cyan, 0 0 35px cyan, 0 0 40px cyan;
+    }
+  }
+
 .wrapper {
     max-width: 75%;
     margin: auto;
