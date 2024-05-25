@@ -14,15 +14,23 @@ header {
     position: fixed;
     z-index: 100;
     background: crimson;
-    /*background: transparent;*/
     display: flex;
-    justify-content: space-between; /* Alinea los elementos a los extremos */
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     top: 0;
     left: 0;
     width: 100%;
-    height: 47px; /* Reducir la altura del encabezado */
+    height: 47px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra al header */
+}
+
+#titulo-header {
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Añadir sombra al texto */
+    margin-top: 5px; /* Ajustar el margen superior según sea necesario */
+    margin-left: 180px; /* Ajustar el margen izquierdo para desplazar más hacia la derecha */
 }
 
 
@@ -41,28 +49,29 @@ header {
     align-items: center;
 }  
 
-
-.boton-enlace,
-
-#boton-carrito {
-    height: 100%; /* Ajustar la altura al encabezado */
-}
-
 #filtro {
     display: block;
     margin: 50px auto; /* Ajusta el valor del margen superior según sea necesario */
     max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
-    padding: 10px;
+    padding: 5px;
     border: 1.5px solid #fff;
     background-color: #af9393;
     font-weight: 600;
     font-size: smaller;
+    
 }
 
 #filtro:focus {
     outline: none;
     border-color: dodgerblue;
 }
+
+.boton-enlace,
+#boton-carrito {
+    height: 100%; /* Ajustar la altura al encabezado */
+}
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -676,6 +685,12 @@ h1{
     .single-product {
         width: 100%; /* Un producto por línea en dispositivos móviles */
         margin: 10px 0; /* Espacio entre productos en dispositivos móviles */
+    }
+
+    #titulo-header {
+        margin-left: auto; /* Para centrar el título */
+        margin-right: auto; /* Para centrar el título */
+        text-align: center; /* Alinear el texto al centro */
     }
 
     #filtro {
