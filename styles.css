@@ -25,6 +25,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra al header */
 }
 
+/* Estilos para el título dentro del encabezado */
 #titulo-header {
     font-size: 24px;
     color: white;
@@ -33,7 +34,7 @@ header {
     margin-left: 180px; /* Ajustar el margen izquierdo para desplazar más hacia la derecha */
     transition: text-shadow 0.5s ease; /* Transición suave para el efecto */
 }
-
+/* Estilos para el título en el encabezado al pasar el cursor sobre él */
 #titulo-header:hover {
     text-shadow: 
         0 0 5px #00ffea, /* Sombra de brillo */
@@ -43,7 +44,7 @@ header {
         0 0 25px #00ffea; /* Sombra de brillo */
 }
 
-
+/* Contenedor para opciones en el encabezado */
 .box-header {
     width: 100%;
     display: flex;
@@ -52,6 +53,7 @@ header {
     /*gap: 10px; /* Espacio entre los elementos */
 }
 
+/* Contenedor para opciones específicas en el encabezado */
 .box-options {
     width: 20%;
     display: flex;
@@ -59,6 +61,7 @@ header {
     align-items: center;
 }  
 
+/* Estilos para el filtro de búsqueda */
 #filtro {
     display: block;
     margin: 50px auto; /* Ajusta el valor del margen superior según sea necesario */
@@ -213,12 +216,13 @@ a[href="Ingresar.html"]
     background-color: orange; /* Cambia el color de fondo al hacer hover */
 }
 
+/* Contenedor para el carrito de compras */
 #carrito-productos {
     margin-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
 }
 
 
-
+/* Contenedor principal */
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Cada columna tendrá un ancho igual */
@@ -234,6 +238,8 @@ a[href="Ingresar.html"]
     border: none !important;
 }
 
+
+/* Estilos para un solo producto */
 .single-product {
     /* width: calc(20% - 36px); Elimina esta línea */
     height: auto;
@@ -253,6 +259,7 @@ a[href="Ingresar.html"]
     transform: translateY(-10px);
 }
 
+/* Imagen del producto */
 .product-image {
     position: relative;
     width: 100%;
@@ -311,7 +318,7 @@ a[href="Ingresar.html"]
 }
 
 
-
+/* Descripción del producto */
 .info {
     padding: 10px;
     text-align: center;
@@ -339,7 +346,7 @@ a[href="Ingresar.html"]
     background-color: orange;
 }
 
-
+/* Estilos del cuadro de diálogo del carrito */
 #carrito-container {
     /* Estilos para el cuadro de diálogo del carrito */
     display: none;
@@ -371,6 +378,7 @@ a[href="Ingresar.html"]
     margin-bottom: 10px;
 }
 
+/* Botones del cuadro de diálogo */
 #cerrar-cuadro-dialogo,
 #boton-comprar {
     background-color: #f44336;
@@ -390,7 +398,7 @@ a[href="Ingresar.html"]
     background-color: #d32f2f;
 }
 
-
+/* Botón para abrir el carrito */
 #boton-carrito {
     background-color: crimson;
     color: white;
@@ -404,6 +412,8 @@ a[href="Ingresar.html"]
 #boton-carrito:hover {
     background-color: orangered;
 }
+
+/* Estilos para las categorías */
 .categoria {
     font-size: 16px;
     padding: 5px 10px;
@@ -419,7 +429,7 @@ a[href="Ingresar.html"]
     border: none;
 }
 
-/* slider */
+/* Estilos para el slider */
 .slider-frame {
     width: 1280px;
     height: auto;
@@ -427,6 +437,7 @@ a[href="Ingresar.html"]
     overflow: hidden;
 }
 
+/* Estilos para los elementos del slider */
 .slider-frame ul {
     display: flex;
     padding: 0;
@@ -435,6 +446,7 @@ a[href="Ingresar.html"]
     animation: slide 20s infinite alternate ease-in-out;
 }
 
+/* Estilos para cada elemento del slider */
 .slider-frame li {
     width: 100%;
     list-style: none;
@@ -444,6 +456,7 @@ a[href="Ingresar.html"]
     width: 40%;
 }
 
+/* Animación del slider */
 @keyframes slide {
     0% { margin-left: 25%; } /* Cambia el valor de inicio para centrar */
     20% { margin-left: 25%; }
@@ -458,12 +471,12 @@ a[href="Ingresar.html"]
     100% { margin-left: -275%; }
 }
 
-
-
-
+/* Estilos para las diapositivas */
 .mySlides {
     display: none
 }
+
+/* Estilos para las imágenes */
 img {
     max-width: 100%; /* Ajusta el tamaño máximo de las imágenes al ancho del contenedor */
     height: auto; /* Mantiene la proporción de aspecto de las imágenes */
@@ -471,11 +484,14 @@ img {
     vertical-align: middle;
 
 }
+
+/* Estilos para los controles del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
     color: black !important;
 }
 
+/* Estilos para el carrusel */
 #carouselExampleCaptions {
     margin-top: 50px; /* Ajusta este valor según la cantidad de espacio que quieras entre el carrusel y el borde superior de la página */
 }
@@ -498,6 +514,7 @@ h5:hover {
     color: red; /* Cambia el color del texto al pasar el cursor sobre él */
 }
 
+/* Estilos para el botón del banner */
 #btn-banner {
     padding: .5rem;
     font-weight: bold;
@@ -514,6 +531,7 @@ h5:hover {
     color: white; /* Cambia el color del texto al pasar el cursor sobre él */
 }
 
+/* Estilos para el texto del banner */
 .carousel-caption span,
 .carousel-caption p {
     font-size: 20px; /* Ajusta el tamaño de la fuente según tus necesidades */
@@ -568,6 +586,7 @@ h5:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic en el botón */
 }
 
+/* Estilos del título de la sección FAQ */
 h1#titulo-faqs {
     font-size: 32px;
     color: white;
@@ -594,6 +613,7 @@ h1#titulo-faqs {
     }
   }
 
+  /* Estilos del acordeón FAQ */
 .wrapper {
     max-width: 75%;
     margin: auto;
@@ -609,6 +629,7 @@ h1#titulo-faqs {
     letter-spacing: 3px;
   }
   
+  /* Contenedor para cada pregunta en el acordeón FAQ */
   .accordion {
     background-color: transparent;
     color: rgba(248, 245, 245, 0.8);
@@ -634,6 +655,7 @@ h1#titulo-faqs {
     background-color: transparent;
   }
   
+  /* Panel de respuesta en el acordeón FAQ */
   .pannel {
     height: 100%;
     border-radius: 1rem;
