@@ -3,6 +3,7 @@
 body {
     font-family: 'Montserrat', sans-serif,"Roboto";
     background-image: url(img/Fondos_Pagina/Fondo-Hogar-3.jpg);
+   /* background-color:#90EE90;*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -247,6 +248,7 @@ a[href="Ingresar.html"]
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
     overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo con transparencia */
     background: #414852;
     border-radius: 15px;
     display: flex;
@@ -288,7 +290,7 @@ a[href="Ingresar.html"]
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(144, 204, 24, 0.8);
+    background-color: rgba(0, 128, 0, 0.2);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -589,29 +591,47 @@ h5:hover {
 /* Estilos del título de la sección FAQ */
 h1#titulo-faqs {
     font-size: 32px;
-    color: white;
+    color: rgb(8, 8, 8);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     cursor: pointer;
     display: inline-block; /* Asegura que el elemento ocupe solo el ancho del texto */
     text-align: center !important; /* Centra el texto */
     margin-left: calc(50% - 150px); /* Ajustamos el margen izquierdo para centrarlo */
+    transition: text-shadow 0.5s ease; /* Transición suave para el efecto de brillo */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombras blancas para resaltar el texto */
+    
 }
-  
-  h1:hover {
-    animation: neon 1.5s infinite alternate; /* Aplicar animación de luces de neón al hacer hover */
-  }
-  
-  @keyframes neon {
+
+/* Aplicar el efecto de brillo al hacer hover */
+h1#titulo-faqs:hover {
+    text-shadow: 
+        0 0 5px #00ffea, /* Sombra de brillo */
+        0 0 10px #00ffea, /* Sombra de brillo */
+        0 0 15px #00ffea, /* Sombra de brillo */
+        0 0 20px #00ffea, /* Sombra de brillo */
+        0 0 25px #00ffea; /* Sombra de brillo */
+}
+
+/* Animación del efecto de brillo */
+@keyframes neon {
     0% {
-      color: white;
-      text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan, 0 0 20px cyan, 0 0 25px cyan, 0 0 30px cyan, 0 0 35px cyan, 0 0 40px cyan;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efecto de sombra inicial */
     }
     100% {
-      color: cyan;
-      text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan, 0 0 20px cyan, 0 0 25px cyan, 0 0 30px cyan, 0 0 35px cyan, 0 0 40px cyan;
+      text-shadow: 
+        0 0 5px #00ffea, /* Sombra de brillo */
+        0 0 10px #00ffea, /* Sombra de brillo */
+        0 0 15px #00ffea, /* Sombra de brillo */
+        0 0 20px #00ffea, /* Sombra de brillo */
+        0 0 25px #00ffea; /* Sombra de brillo */
     }
-  }
+}
+
+/* Aplicar la animación al título de la sección FAQ */
+h1#titulo-faqs:hover {
+    animation: neon 1.5s infinite alternate; /* Aplicar animación de luces de neón al hacer hover */
+}
 
   /* Estilos del acordeón FAQ */
 .wrapper {
@@ -630,9 +650,9 @@ h1#titulo-faqs {
   }
   
   /* Contenedor para cada pregunta en el acordeón FAQ */
-  .accordion {
+.accordion {
     background-color: transparent;
-    color: rgba(248, 245, 245, 0.8);
+    color: black;
     cursor: pointer;
     font-size: 1.2rem;
     width: 100%;
@@ -644,16 +664,17 @@ h1#titulo-faqs {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-  }
-  
-  .accordion i {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombras blancas para resaltar el texto */
+}
+
+.accordion i {
     font-size: 1.6rem;
-  }
-  
-  .active,
-  .accordion:hover {
+}
+
+.active,
+.accordion:hover {
     background-color: transparent;
-  }
+}
   
   /* Panel de respuesta en el acordeón FAQ */
   .pannel {
@@ -674,7 +695,8 @@ h1#titulo-faqs {
     opacity: 1; /* Muestra la respuesta */
     height: auto; /* Muestra el contenido de la respuesta */
     background-color: #ffffcc; /* Color de fondo de resaltado */
-    color: #0e0d0d; /* Cambiar el color del texto para que contraste */
+    color: #fffafa; /* Cambiar el color del texto para que contraste */
+    background-color:#414852
   }
   
   
