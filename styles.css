@@ -203,20 +203,6 @@ a[href="Ingresar.html"]
     background-color: transparent;
 }
 
-
-/* Estilos para el enlace con icono */
-.enlace-comun {
-    display: inline-block; /* Asegura que el enlace ocupe solo el espacio del icono */
-    width: 24px; /* Establece el ancho igual al del icono */
-    height: 24px; /* Establece la altura igual al del icono */
-    color: white;
-    text-decoration: none; /* Elimina el subrayado */
-}
-
-.enlace-comun:hover {
-    background-color: orange; /* Cambia el color de fondo al hacer hover */
-}
-
 /* Contenedor para el carrito de compras */
 #carrito-productos {
     margin-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
@@ -716,21 +702,20 @@ h1#titulo-faqs:hover {
     color: white;
 }
 
-/* Estilos para el grupo 1 del footer en pantallas grandes */
 .pie-pagina .grupo-1 {
     width: 100%;
-    max-width: 1200px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 50px;
-    padding: 45px 0px;
+    padding: 10px 0px; /* Reduce el padding superior para acercar más el Grupo 1 al Grupo 2 */
 }
-
 /* Estilos para el grupo 2 del footer en pantallas grandes */
 .pie-pagina .grupo-2 {
+    width: 100%; /* Ajusta el ancho al 100% para que abarque todo el espacio disponible */
+    margin: auto; /* Centra el contenido horizontalmente */
     background-color: #0a1a2a;
-    padding: 15px 10px;
+    padding: 2px;
     text-align: center;
     color: #fff;
 }
@@ -748,6 +733,13 @@ h1#titulo-faqs:hover {
     background-color: #0d2033;
     text-align: center;
     transition: all 300ms ease;
+}
+
+/* Estilos para los títulos dentro de los contenedores .box */
+.box h2 {
+    font-size: 18px; /* Ajusta el tamaño de fuente según sea necesario */
+    color: #fff; /* Color del texto */
+    margin-bottom: 15px; /* Espacio inferior entre el título y el contenido */
 }
 
 /* Estilos para el texto en el footer en pantallas grandes */
@@ -790,8 +782,8 @@ h1#titulo-faqs:hover {
 
     /* Estilos del footer para dispositivos móviles */
     .pie-pagina {
-        padding: 15px 10px;
-    }
+        padding: 3px;
+    } 
 
     .pie-pagina .grupo-1 {
         grid-template-columns: repeat(1, 1fr);
@@ -803,5 +795,13 @@ h1#titulo-faqs:hover {
         width: 100px; /* Ajusta el tamaño de las imágenes de las redes sociales en dispositivos móviles */
     }
 
+    .pie-pagina .grupo-2 {
+        position: relative; /* Mantiene el flujo normal del documento */
+        bottom: 0; /* Lo coloca al final del contenedor del footer */
+        width: 100%; /* Ocupa todo el ancho */
+        background-color: #0a1a2a; /* Ajusta el color de fondo según sea necesario */
+        text-align: center; /* Alinea el texto al centro */
+        color: #fff; /* Color del texto */
+    }
 }
   
