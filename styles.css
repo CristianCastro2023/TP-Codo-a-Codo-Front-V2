@@ -14,7 +14,7 @@ body {
 header {
     position: fixed;
     z-index: 100;
-    background: crimson;
+    background: #333333;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,7 +103,7 @@ header {
     display: none;
     position: absolute;
     background-color: #af9393;
-    border: 2px solid crimson;
+    border: 2px solid #333333;
     min-width: 160px;
     z-index: 1;
     border-end-end-radius: 1rem;
@@ -116,7 +116,7 @@ header {
     text-decoration: none;
     display: block;
     text-align: center;
-    border-bottom: 2px solid crimson;
+    border-bottom: 2px solid #333333;
 }
 
 .dropdown-content a:last-child {
@@ -388,7 +388,7 @@ a[href="Ingresar.html"]
 
 /* Botón para abrir el carrito */
 #boton-carrito {
-    background-color: crimson;
+    
     color: white;
     border: none;
     padding: 10px;
@@ -698,7 +698,7 @@ h1#titulo-faqs:hover {
 /* Estilos del footer para pantallas grandes */
 .pie-pagina {
     width: 100%;
-    background-color: crimson;
+    background-color: #333333;
     color: white;
 }
 
@@ -714,7 +714,7 @@ h1#titulo-faqs:hover {
 .pie-pagina .grupo-2 {
     width: 100%; /* Ajusta el ancho al 100% para que abarque todo el espacio disponible */
     margin: auto; /* Centra el contenido horizontalmente */
-    background-color: #0a1a2a;
+    background-color: black;
     padding: 2px;
     text-align: center;
     color: #fff;
@@ -799,7 +799,7 @@ h1#titulo-faqs:hover {
         position: relative; /* Mantiene el flujo normal del documento */
         bottom: 0; /* Lo coloca al final del contenedor del footer */
         width: 100%; /* Ocupa todo el ancho */
-        background-color: #0a1a2a; /* Ajusta el color de fondo según sea necesario */
+        background-color: black; /* Ajusta el color de fondo según sea necesario */
         text-align: center; /* Alinea el texto al centro */
         color: #fff; /* Color del texto */
     }
