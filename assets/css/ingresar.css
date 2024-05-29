@@ -33,7 +33,7 @@ body {
     transform: translate(-50%, -50%);
     max-width: 430px;
     width: 100%;
-    background: #fff;
+    background: #333333;
     border-radius: 7px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin-top: 300px; /* Ajustar el margen superior para llevarlo más abajo */

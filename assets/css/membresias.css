@@ -5,145 +5,122 @@
 }
 
 body {
-    background: #dfe2df;
-    font-family: 'open sans';
-    background-image: url('../../img/Fondos_Pagina/Fondo-Fantasia-1.jpg');
+    background: #f0f2f5;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../../img/Fondos_Pagina/Fondo-Libro2.jpg');
     background-size: cover;
+
 }
+
 .home-link {
-    position: fixed;
+   
     top: 20px;
     left: 20px;
-    z-index: 999; /* Asegura que el icono esté sobre otros elementos */
-    color: #fff; /* Color del icono */
-    font-size: 24px; /* Tamaño del icono */
-    text-decoration: none; /* Para quitar el subrayado del enlace */
+    z-index: 999;
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
 }
+
+
 .contenedor {
     width: 90%;
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
-    height: auto; /* Cambiado a auto para que la altura se ajuste automáticamente */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 40px 0;
 }
 
 .tabla {
-    width: 33%;
-    height: auto; /* Cambiado a auto para que la altura se ajuste automáticamente */
-    margin: auto;
-    border: 1px solid #0a0a0a;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px 0px #0c0c0c;
-    padding: 60px;
+    width: 30%;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
     text-align: center;
-    flex-grow: 1;
-    color: #080808;
-    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tabla>h2 {
-    font-size: 30px;
-    margin-bottom: 35px;
+.tabla:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tabla h2 {
+    background-color: #343759;
+    color: #fff;
+    padding: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 .tabla img {
-    width: 64px;
-    margin-bottom: 35px;
+    width: 80px;
+    margin: 20px 0;
 }
 
-.tabla>h3 {
-    font-size: 30px;
+.tabla h3 {
+    font-size: 32px;
+    color: #343759;
     margin-bottom: 20px;
 }
 
-.tabla>p {
-    display: block;
+.tabla ul {
+    list-style: none;
+    padding: 0 20px;
     margin-bottom: 20px;
+    text-align: left;
+}
+
+.tabla ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tabla ul li::before {
+    content: '\f00c'; /* FontAwesome check icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #a5f059;
 }
 
 .boton {
     display: inline-block;
-    width: 150px;
+    width: 160px;
     padding: 12px;
     background: #a5f059;
-    text-decoration: none;
     color: #343759;
-    border-radius: 100px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    margin: auto;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.tabla:hover {
+.boton:hover {
     background: #343759;
-    color: #f1f1f2;
-    transition: .5s all;
-    transform: scale(1.1);
-    cursor: pointer;
+    color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
     .tabla {
         width: 45%;
-        max-width: none;
-        margin-bottom: 40px;
-        flex-grow: initial;
     }
 }
 
 @media screen and (max-width: 700px) {
     .tabla {
-        width: 45%;
-        padding: 30px;
-    }
-    .tabla>h2 {
-        margin-top: 40px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .tabla {
-        width: 85%;
+        width: 90%;
         padding: 20px;
     }
-}
-
-/* Estilos para "pagina-2" */
-.pagina-2 {
-    width: 100%; /* O ajusta el ancho según tus necesidades */
-    margin-top: 20px; /* Espacio entre "pagina-2" y las tablas de membresía */
-}
-
-/* Estilos para el grupo 2 del footer en pantallas grandes */
-.grupo-2 {
-    background-color: #0a1a2a;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-
-/* Estilos para "pagina-2" */
-.pagina-2 {
-    width: 100%; /* O ajusta el ancho según tus necesidades */
-    margin-top: 20px; /* Espacio entre "pagina-2" y las tablas de membresía */
-}
-
-.pagina-2 p {
-    font-size: 28px; /* Tamaño de fuente para los párrafos */
-}
-
-.pagina-2 h2 {
-    font-size: 28px; /* Tamaño de fuente para los títulos */
-}
-
-.pagina-2 ul {
-    font-size: 26px; /* Tamaño de fuente para las listas */
-}
-
-.pagina-2 a {
-    font-size: 2px; /* Tamaño de fuente para los enlaces */
 }
