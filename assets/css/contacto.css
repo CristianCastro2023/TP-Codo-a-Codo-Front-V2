@@ -209,7 +209,7 @@ form > button:hover,
     20%, 40%, 60%, 80% {transform: translateX(10px);} 
  }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .container {
         width: 95%;
         display: flex;
@@ -224,4 +224,51 @@ form > button:hover,
     .box-info > h1 {
         font-size: 1.5rem;
     }
+
+    .data {
+        display: none; /* Oculta el bloque de información */
+    }
+
+    .links {
+        display: none; /* Oculta los enlaces de redes sociales */
+    }
+
+    
 }
+
+/* Estilos para el grupo 2 del footer */
+.grupo-2 {
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #333333; /* Color de fondo del footer */
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff; /* Color del texto, igual al del footer */
+    z-index: 999; /* Asegura que esté sobre otros elementos */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh; /* Tamaño mínimo del viewport */
+    }
+
+    .container {
+        flex: 1; /* Ocupa todo el espacio disponible */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .box-info > h1 {
+        margin-top: 50px; /* Ajusta el espacio superior */
+    }
+
+    .grupo-2 {
+        position: relative; /* Cambia la posición a relativa */
+        width: 100%; /* Ancho completo del viewport */
+    }
+}
+
