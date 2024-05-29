@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url('../../img/Fondos_Pagina/Fondo-Fantasia-1.jpg');
+    background-image: url('../../img/Fondos_Pagina/Fondo-Libro2.jpg');
 }
 
 .container {
-    display:grid;
-    grid-template-columns: repeat(2,50%);
-    padding:20px;
-    gap:10px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 20px;
+    gap: 10px;
     width: 1000px;
 }
 
@@ -29,16 +29,16 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    color: #fff; /* Color del icono */
-    font-size: 24px; /* Tamaño del icono */
+    color: black; /* Color del icono */
+    font-size: 19px; /* Tamaño del icono */
     text-decoration: none; /* Para quitar el subrayado del enlace */
 }
 
 .box-info {
-    color:#fff;
-    display:flex;
+    color: #fff;
+    display: flex;
     flex-direction: column;
-    gap:50px;
+    gap: 50px;
 }
 
 .box-info > h1 {
@@ -50,24 +50,25 @@ body {
 .data {
     display: flex;
     flex-direction: column;
-    gap:25px
+    gap: 25px;
 }
 
 .data > p {
     font-size: 1rem;
-    color: #e9f0eb;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra con desplazamiento de 2px horizontal y 2px vertical, con un radio de desenfoque de 4px y un color de sombra semitransparente */
+    color: #0a0a0a; /* Color del texto negro */
+    font-weight: bold; /* Hace el texto más negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto */
 }
 
 .data > p > i {
-    color:crimson;
+    color: crimson;
     margin-right: 10px;
-    font-size:25px;
+    font-size: 25px;
 }
 
 .links {
-    display:flex;
-    gap:15px;
+    display: flex;
+    gap: 15px;
 }
 
 .links > a {
@@ -80,20 +81,22 @@ body {
 }
 
 .links > a > i {
-    color:#fff;
+    color: #fff;
     line-height: 40px;
     font-size: 20px;
 }
 
 form {
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
-    gap:15px;
+    gap: 15px;
+    
 }
 
 .input-box {
-    position:relative;
+    position: relative;
+    
 }
 
 .input-box input[type="file"] {
@@ -120,28 +123,30 @@ form {
     width: 100%;
     height: 40px;
     padding: 0 10px;
-    outline:none;
-    background: rgba(255 255 255 / .1);
-    border:3px solid transparent;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
     letter-spacing: 1px;
-    transition:.3s;
-    color:#fff;
+    transition: .3s;
+    color: #fff;
 }
 
 .input-box input::placeholder,
 .input-box textarea::placeholder {
-    color:#0a0a0a;
+    color: #0a0a0a;
+    font-weight: bold; /* Hace el texto más negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto */
 }
 
 .input-box input:focus::placeholder,
 .input-box textarea:focus::placeholder {
-    color:transparent;
+    color: transparent;
 }
 
 .input-box input:focus,
 .input-box textarea:focus,
 .input-box select:focus {
-    border-bottom:3px solid crimson;
+    border-bottom: 3px solid crimson;
     animation: shake .2s;
 }
 
@@ -149,50 +154,57 @@ form {
     width: 100%;
     height: 130px;
     padding: 10px;
-    background: rgba(255 255 255 / .1);
-    border:3px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
     letter-spacing: 1px;
     outline: none;
-    transition:.3s;
-    color:#fff;
+    transition: .3s;
+    color: #fff;
     letter-spacing: 1.5px;
 }
 
 .input-box > i {
-    position:absolute;
-    top:50%;
+    position: absolute;
+    top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    color:rgba(255 255 255 / .3);
+    color: rgba(255, 255, 255, 0.3);
     transition: .3s;
 }
 
 .input-box > input:focus ~ i {
-    color:crimson;
+    color: crimson;
 }
 
 .input-box select {
     width: 100%;
     height: 40px;
     padding: 0 10px;
-    outline:none;
-    background: rgba(255 255 255 / .1);
-    border:3px solid transparent;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    border: 1px solid black;
     letter-spacing: 1px;
-    transition:.3s;
-    color:#000; /* Cambia el color del texto a negro */
+    transition: .3s;
+    color: #0a0a0a; /* Color del texto negro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+}
+
+.input-box select:focus {
+    border-bottom: 3px solid crimson; /* Resalta el borde inferior en foco */
 }
 
 .input-box select option {
-    color: #000; /* Cambia el color del texto de las opciones a negro */
+    background: #000; /* Fondo negro */
+    color: #fff; /* Color del texto blanco */
 }
+
 form > button {
     width: 100%;
     padding: 10px;
     outline: none;
     background: crimson;
-    color:#fff;
-    border:none;
+    color: #fff;
+    border: none;
     transition: .1s;
     cursor: pointer;
     font-size: 1rem;
@@ -203,22 +215,22 @@ form > button:hover,
     background: rgb(172, 16, 47);
 }
 
-@keyframes shake { 
-    0%, 100% {transform: translateX(0);} 
-    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
-    20%, 40%, 60%, 80% {transform: translateX(10px);} 
- }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .container {
         width: 95%;
         display: flex;
         flex-direction: column;
-        gap:20px;
+        gap: 20px;
     }
 
     .box-info {
-        gap:15px;
+        gap: 15px;
     }
 
     .box-info > h1 {
@@ -232,8 +244,6 @@ form > button:hover,
     .links {
         display: none; /* Oculta los enlaces de redes sociales */
     }
-
-    
 }
 
 /* Estilos para el grupo 2 del footer */
@@ -271,4 +281,3 @@ form > button:hover,
         width: 100%; /* Ancho completo del viewport */
     }
 }
-
