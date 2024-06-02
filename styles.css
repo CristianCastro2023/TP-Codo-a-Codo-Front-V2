@@ -65,14 +65,14 @@ header {
 /* Estilos para el filtro de búsqueda */
 #filtro {
     display: block;
-    margin: 50px auto; /* Ajusta el valor del margen superior según sea necesario */
+    margin: 4rem auto auto auto; /* Ajusta el valor del margen superior según sea necesario */
     max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
-    padding: 5px;
+    padding: 10px;
     border: 1.5px solid #fff;
     background-color: #af9393;
     font-weight: 600;
     font-size: smaller;
-    
+    border-radius: 0.5rem;
 }
 
 #filtro:focus {
@@ -215,7 +215,6 @@ a[href="Ingresar.html"]
     grid-template-columns: repeat(5, 1fr); /* Cada columna tendrá un ancho igual */
     gap: 20px; /* Espacio entre las celdas del grid */
     padding: 15px;
-    margin-top: 50px;
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -716,9 +715,11 @@ h1#titulo-faqs:hover {
 
     #filtro {
         width: 60%; /* Reducir el ancho de la barra de búsqueda */
-        margin: 50px auto; /* Centrar la barra de búsqueda y darle espacio hacia abajo */
+        /*margin: 50px auto; /* Centrar la barra de búsqueda y darle espacio hacia abajo */
         font-size: 16px; /* Ajustar el tamaño de fuente */
         padding: 8px; /* Ajustar el padding para que se vea bien en dispositivos móviles */
+        border-radius: 1rem;
+        
     }
 
     .box-options {
